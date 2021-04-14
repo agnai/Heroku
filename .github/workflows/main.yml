@@ -31,5 +31,5 @@ jobs:
     - name: Preflight-Webhook
       uses: distributhor/workflow-webhook@v1
       with:
-        url: "https://api.preflight.com/v1/webhooks/kFFMl5gfJyBerIW/run?browsers=win-chrome&sizes=1440x900&environmentId=TcVJAiAebm3g"
+        webhook_url: "https://api.preflight.com/v1/webhooks/kFFMl5gfJyBerIW/run?browsers=win-chrome&sizes=1440x900&environmentId=TcVJAiAebm3g"
         
