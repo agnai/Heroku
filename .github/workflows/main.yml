@@ -28,8 +28,8 @@ jobs:
     
     steps:
     # Runs a single command using the runners shell
-    - name: Preflight-Webhook
-      uses: distributhor/workflow-webhook@v1
-      with:
-        webhook_url: "https://api.preflight.com/v1/webhooks/kFFMl5gfJyBerIW/run?browsers=win-chrome&sizes=1440x900&environmentId=TcVJAiAebm3g"
+      - name: Invoke deployment hook
+        uses: distributhor/workflow-webhook@v1
+        env:
+          webhook_url: "https://api.preflight.com/v1/webhooks/kFFMl5gfJyBerIW/run?browsers=win-chrome&sizes=1440x900&environmentId=TcVJAiAebm3g"
         
