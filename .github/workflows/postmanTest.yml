@@ -20,4 +20,5 @@ jobs:
       - uses: actions/checkout@master
       - uses: matt-ball/newman-action@master
         with:
-          collection: newman  run https://www.getpostman.com/collections/fbf47ccbf74100405ceb
+          apiKey: PMAK-636ea7ec596d03060715762f-e218eb33eac4fa5a9a80eb64871f082145
+          collection: 6450325-c2343b08-0b8c-48cd-865e-9300e339f1f7
