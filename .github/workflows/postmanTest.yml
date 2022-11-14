@@ -1,0 +1,33 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Run All Preflight tests
+
+# Controls when the action will run. 
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  push:
+    branches: [ master ]
+  # pull_request:
+  #  branches: [ master ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch: 
+     inputs:
+      logLevel:
+        description: 'Log level'     
+        required: true
+        default: 'warning'
+      tags:
+        description: 'Test scenario tags'  
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+
+  test_commentary:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    
+    steps:
+- uses: actions/checkout@master
+- uses: matt-ball/newman-action@master
+  with:
+    collection:https://api.getpostman.com/collections/6450325-c2343b08-0b8c-48cd-865e-9300e339f1f7?apikey=PMAK-636ea7ec596d03060715762f-e218eb33eac4fa5a9a80eb64871f082145
